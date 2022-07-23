@@ -38,7 +38,7 @@ void LightingCelShaded_float(float3 Normal,float4 ColorIn, float Brightness, flo
 
     Color = mm.Color;
 
-    Color *= Toon(Normal, light, mm) * mm.Strength + mm.Brightness;
+    Color *= light.color * Toon(Normal, light, mm) * mm.Strength + mm.Brightness;
 #endif
 }
 #endif
